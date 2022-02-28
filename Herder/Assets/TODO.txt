@@ -1,0 +1,35 @@
+01 Menu Scene:
+	UI Navigation
+	Data Storage Persistence/Singleton
+
+02 Game Scene:
+	Pause button?
+
+	Scene Navigation
+
+	Game Controller
+		Gameover Triggers
+		Keep track of score
+		Keep track of level scrolling speed
+		Keep track of sheep alive		
+	
+	Dog Movement (SQUARE)
+		Bounded in screen
+		Follow taps (no pathfinding at first)
+		Ignore collisions with obstacles
+
+	Sheep Movement (CIRCLES)
+		Move up the screen
+		Move to the side randomly
+		Set different randomness based on distance to dog
+		Bounded on the sides of screen
+		React to dog
+
+	Level scrolling (RECTANGLES / TRIANGLES)
+		Fences sheep collide with
+		Scrolling
+		Generation of a few different chunks
+
+03 End Scene:
+	Display score
+	UI navigation
