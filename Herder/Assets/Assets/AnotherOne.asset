@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12089f6e02e83864096e1af36fbceb2c, type: 3}
-  m_Name: Fences
+  m_Name: AnotherOne
   m_EditorClassIdentifier: 
-  chunkSize: {x: 10, y: 10}
+  chunkSize: {x: 5, y: 5}
   levelChunks:
   - {fileID: 3427709652120040044, guid: 7c1d4c0a2dff0f74fb64be2cb21277ee, type: 3}
   entryDirection: 0
