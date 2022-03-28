@@ -1017,7 +1017,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chunks:
   - {fileID: 4313296338490064189, guid: bae67c54321186b43ab6fc3e0301692b, type: 3}
+  - {fileID: 2518243343008389715, guid: 8d7de2a534960774899158379d5a4535, type: 3}
+  - {fileID: 4216809277853205861, guid: 507456e6827d847e6b90406a454a38d8, type: 3}
+  - {fileID: 6055232622860725737, guid: b5141eeb1256a4fed8d132040dc9f5c8, type: 3}
+  - {fileID: -2076255847026201058, guid: 5b390b4fb3b4c435495d9e98056d45ac, type: 3}
+  - {fileID: -3771495873130744565, guid: 10bb1bbfdb5a7472aaea9ade6fe952a5, type: 3}
   - {fileID: -446419825410711558, guid: 25b9f365a7ebd40499229755536f9da3, type: 3}
+  - {fileID: 5940745593530926540, guid: 0d48dedf5fc34714998e61325029a70e, type: 3}
+  - {fileID: -4149922931301184327, guid: a3754ca2bd394bc498ea18fbc53d0748, type: 3}
   chunkSpawnPos: 15
   chunkDeathPos: -15
   activeChunks: []
