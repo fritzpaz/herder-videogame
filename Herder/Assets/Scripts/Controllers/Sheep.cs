@@ -69,15 +69,15 @@ public class Sheep : MonoBehaviour
     }
 
     // Handle Sheep's collision
-    private void OnCollisionEnter2D(Collision2D collison){
+    private void OnCollisionEnter2D(Collision2D collision){
         //If Sheep Collides with Lake, Make the Sheep Fade then Destroy itself
-        if (collison.gameObject.tag == "Lake"){
-            StartCoroutine("FadeSheepSpriteInLake");        // Call IEnumerator 
-            Destroy(gameObject);                            // Destroy after Coroutine is completed
+        if (collision.gameObject.tag == "Lake"){
+            StartCoroutine("FadeSheepSpriteInLake");  // Call IEnumerator
+            sheepSpeed = 0;
         }
     }
        
-    // Allows for timing the fading/destruction of sheep.
+    //Allows for timing the fading/destruction of sheep.
    IEnumerator FadeSheepSpriteInLake(){
        // Fade sheep a bit every 0.05 seconds
        for (float f =1f; f > 0f; f-= 0.05f){

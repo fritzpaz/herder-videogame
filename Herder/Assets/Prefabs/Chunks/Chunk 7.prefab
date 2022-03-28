@@ -337,7 +337,6 @@ GameObject:
   m_Component:
   - component: {fileID: 59030576675153989}
   - component: {fileID: -446419825410711558}
-  - component: {fileID: 3207970734924274269}
   m_Layer: 0
   m_Name: Chunk 7
   m_TagString: Untagged
@@ -380,18 +379,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dad: {fileID: 0}
   size: 8
---- !u!114 &3207970734924274269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8168312450673036557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 576a10741452ca2479826fe7f735f06a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8314277981454469680
 GameObject:
   m_ObjectHideFlags: 0
