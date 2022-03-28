@@ -6,6 +6,7 @@ public class Chunk : MonoBehaviour
 {
     #region DATA
     // Components
+    [HideInInspector]
     public ChunkSpawner dad;                // ChunkSpawner (parent)
     SheepManager sm;                        // Sheep Manager reference
 

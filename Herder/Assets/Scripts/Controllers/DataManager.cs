@@ -11,8 +11,8 @@ public class DataManager : MonoBehaviour
     public int money;
     public int highscore;
 
-
     // TERRAIN
+    public float startLevelSpeed;
     public float levelSpeed;
     public readonly float maxLevelSpeed;
     List<GameObject> chunkHistory;
@@ -92,6 +92,13 @@ public class DataManager : MonoBehaviour
             return new GameObject();
         }
         return chunkHistory[chunkHistory.Count - 1];
+    }
+
+    // Reset Data
+    public void PrepDataForGame()
+    {
+        score = 0;
+        levelSpeed = startLevelSpeed;
     }
 #endregion
 }
