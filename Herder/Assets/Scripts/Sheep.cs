@@ -49,6 +49,9 @@ public class Sheep : MonoBehaviour
                                                                 - (sheepRepulsion.y * (1 / distance) * Mathf.Sin(angle) * Time.deltaTime),
                                             transform.position.z);
 
+        // Rotate Sheep towards where it moves
+        transform.rotation = Quaternion.Euler(0, 0, Mathf.Rad2Deg * angle + 90);
+
         // Check for death
         if (transform.position.y < sm.sheepDeathPos)
         {

@@ -43,7 +43,11 @@ public class Dog : MonoBehaviour
             transform.position = new Vector3(   transform.position.x + (speed * Mathf.Cos(angle) * Time.deltaTime),
                                             transform.position.y + (speed * Mathf.Sin(angle) * Time.deltaTime),
                                             transform.position.z);
+
+            //Angle towards there
+            transform.rotation = Quaternion.Euler(0, 0, Mathf.Rad2Deg * angle + 270);
         }
+
     }
     #endregion
 }

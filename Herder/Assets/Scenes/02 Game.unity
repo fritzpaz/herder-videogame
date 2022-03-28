@@ -349,6 +349,7 @@ MonoBehaviour:
   score: 0
   money: 0
   highscore: 0
+  startLevelSpeed: 0
   levelSpeed: 2
   sceneNumber: 0
   ads: 0
@@ -579,10 +580,10 @@ RectTransform:
   m_Father: {fileID: 1603822424}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 118}
-  m_SizeDelta: {x: -36, y: -320}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 721.51}
+  m_SizeDelta: {x: 0, y: 135.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &594569911
 MonoBehaviour:
@@ -606,11 +607,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 90
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 300
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -899,6 +900,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 9114945345083234815, guid: 76a6eaf2d6f9cf0439d19d82cd0f9c23,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76a6eaf2d6f9cf0439d19d82cd0f9c23, type: 3}
 --- !u!1001 &986536073
@@ -972,6 +978,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114945345083234815, guid: 76a6eaf2d6f9cf0439d19d82cd0f9c23,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76a6eaf2d6f9cf0439d19d82cd0f9c23, type: 3}
@@ -1138,12 +1149,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1267,10 +1278,10 @@ RectTransform:
   m_Father: {fileID: 594569910}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -15}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -298.83}
+  m_SizeDelta: {x: 0, y: 519.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1744197827
 MonoBehaviour:
@@ -1306,11 +1317,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 1
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 300
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1398,6 +1409,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1104070550}
     m_Modifications:
+    - target: {fileID: -8638862435740337183, guid: 76a6eaf2d6f9cf0439d19d82cd0f9c23,
+        type: 3}
+      propertyPath: sheepRepulsion.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8638862435740337183, guid: 76a6eaf2d6f9cf0439d19d82cd0f9c23,
+        type: 3}
+      propertyPath: sheepRepulsion.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3463956219367309539, guid: 76a6eaf2d6f9cf0439d19d82cd0f9c23,
         type: 3}
       propertyPath: m_RootOrder
@@ -1531,6 +1552,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114945345083234815, guid: 76a6eaf2d6f9cf0439d19d82cd0f9c23,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76a6eaf2d6f9cf0439d19d82cd0f9c23, type: 3}
@@ -1744,6 +1770,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114945345083234815, guid: 76a6eaf2d6f9cf0439d19d82cd0f9c23,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76a6eaf2d6f9cf0439d19d82cd0f9c23, type: 3}
