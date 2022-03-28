@@ -58,6 +58,11 @@ public class SceneController : MonoBehaviour
         UpdateSceneNumber(sceneNumber);
     }
 
+    public void ResetGameData()
+    {
+        data.PrepDataForGame();
+    }
+
     // Exit Game
     public void ExitGame(){
         #if UNITY_EDITOR

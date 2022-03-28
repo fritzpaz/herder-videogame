@@ -579,10 +579,10 @@ RectTransform:
   m_Father: {fileID: 1603822424}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 118}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: -36, y: -320}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &594569911
 MonoBehaviour:
@@ -1006,6 +1006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chunks:
   - {fileID: 4313296338490064189, guid: bae67c54321186b43ab6fc3e0301692b, type: 3}
+  - {fileID: 2518243343008389715, guid: 8d7de2a534960774899158379d5a4535, type: 3}
   - {fileID: 2518243343008389715, guid: 8d7de2a534960774899158379d5a4535, type: 3}
   chunkSpawnPos: 15
   chunkDeathPos: -15
