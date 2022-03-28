@@ -8,7 +8,7 @@ public class Sheep : MonoBehaviour
     SheepManager sm;                        // SheepManager instance
     Dog dog;                                // Dog instance
     DataManager data;                       // DataManager instance
-
+    SpriteRenderer fade;                    // Used for Fading Sheep
     public Vector2 sheepRepulsion;          // Sheep Repulsion Speed
     float sheepSpeed;                        // Minimum Vertical Sheep Speed
     float distance;                         // Distance from Dog
@@ -32,6 +32,9 @@ public class Sheep : MonoBehaviour
 
         // Update Count
         sm.sheepCount += 1;
+
+        // Used for Fading
+        fade= GetComponent<SpriteRenderer>();
     }
 
 
@@ -62,6 +65,24 @@ public class Sheep : MonoBehaviour
     private void OnDestroy()
     {
         sm.sheepCount -= 1;
+        
+    }
+    private void OnCollisionEnter2D(Collision2D collison){ //If Sheep Collides with Lake Fade
+         if (collison.gameObject.tag == "Lake"){
+            StartCoroutine("fadeSprite");
+         }
+    }
+       
+   IEnumerator fadeSprite(){
+       for (float f =1f; f >= -0.05f; f-= 0.05f){
+           Color c = fade.material.color;
+           c.a = f;
+           fade.material.color = c;
+           yield return new WaitForSeconds(0.05f);
+       }
+    
     }
     #endregion
 }
+
+
