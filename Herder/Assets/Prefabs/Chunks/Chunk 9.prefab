@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dad: {fileID: 0}
-  size: 9
+  size: 13
 --- !u!1001 &2545352786910277937
 PrefabInstance:
   m_ObjectHideFlags: 0

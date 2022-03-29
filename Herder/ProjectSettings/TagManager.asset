@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Sheep
+  - Lake
+  - Barn
+  - Dog
   layers:
   - Default
   - TransparentFX
