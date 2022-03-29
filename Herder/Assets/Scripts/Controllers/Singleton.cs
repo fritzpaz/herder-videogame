@@ -10,7 +10,10 @@ public class Singleton : MonoBehaviour
 {
     #region SINGLETON/MAIN
     public static Singleton instance {get; private set;}                    // Reference for itself
+    [HideInInspector]
     public DataManager data {get; private set;}                             // Reference for DataManager
+    [HideInInspector]
+    public SoundManager sound { get; private set; }                         // Reference for SoundManager
 
     void Awake()
     {
@@ -25,7 +28,10 @@ public class Singleton : MonoBehaviour
         DontDestroyOnLoad(this);
 
         // Reference for DataManager
-        data = GetComponentInChildren<DataManager>();
+        data = GetComponent<DataManager>();
+
+        // Reference for SoundManager
+        sound = GetComponent<SoundManager>();
     }
     #endregion
 }

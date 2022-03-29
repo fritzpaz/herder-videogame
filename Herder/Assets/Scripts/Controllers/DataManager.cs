@@ -11,6 +11,10 @@ public class DataManager : MonoBehaviour
     public int money;
     public int highscore;
 
+    // SOUND
+    public float musicVolume;                               // Music refers to the background music
+    public float audioVolume;                               // Audio refers to sound effects
+
     // TERRAIN
     public float startLevelSpeed;
     public float levelSpeed;
@@ -40,13 +44,15 @@ public class DataManager : MonoBehaviour
     void OnDisable(){
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
-#endregion
+    #endregion
 
-#region SAVE
-    
-#endregion
+    // MUST IMPLEMENT!!!!!!!!!!!!!!!!!!
+    #region SAVE
 
-#region METHODS
+    #endregion
+    // MUST IMPLEMENT!!!!!!!!!!!!!!!!!!
+
+    #region METHODS
     // Add integer 's' to score
     public void AddScore(int s){
         score += s;
