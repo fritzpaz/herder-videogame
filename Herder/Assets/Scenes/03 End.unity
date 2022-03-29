@@ -251,6 +251,8 @@ MonoBehaviour:
   score: 0
   money: 0
   highscore: 0
+  musicVolume: 0
+  audioVolume: 0
   startLevelSpeed: 0
   levelSpeed: 0
   sceneNumber: 0
@@ -1111,7 +1113,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b061b23dd924b8244a523611b2287bdd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dd9aaeab61ddcac49bac4c80a6c4732d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1131,7 +1133,7 @@ Transform:
   m_GameObject: {fileID: 1652305392}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
