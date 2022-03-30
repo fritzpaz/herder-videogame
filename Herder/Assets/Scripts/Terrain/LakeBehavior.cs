@@ -10,7 +10,7 @@ public class LakeBehavior : MonoBehaviour
     void Start () {
         soundManager = Singleton.instance.sound;            // SoundManager Reference
     }
-   private void OnCollisionEnter2D(Collision2D collison){
+   private void OnTriggerEnter2D(Collider2D collison){
         if (collison.gameObject.tag == "Sheep"){
             soundManager.PlayAudioClip(breakSound);         // Play audio clip when sheep dies   
             Destroy(collison.gameObject,1);

@@ -36,7 +36,7 @@ public class BarnBehavior : MonoBehaviour
     IEnumerator Fade()
     {
         // Fade barn a bit every 0.05 seconds
-        for (float f = 1f; f > 0f; f -= 0.25f)
+        for (float f = 1f; f > 0f; f -= 0.5f)
         {
             Color c = fade.material.color;
             c.a = f;                                         // Changing alpha (transparency)

@@ -87,7 +87,7 @@ public class Sheep : MonoBehaviour
     }
 
     // Handle Sheep's collision
-    private void OnCollisionEnter2D(Collision2D collision){
+    private void OnTriggerEnter2D(Collider2D collision){
         //If Sheep Collides with Lake, Make the Sheep Fade then Destroy itself
         if (collision.gameObject.tag == "Lake"){
             sheepSpeed = 0;                                     // Reduce sheep speed

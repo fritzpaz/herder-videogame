@@ -13,8 +13,8 @@ public class Dog : MonoBehaviour
 
     public float speed;                                     // Dog's speed
 
-    public AudioClip barkSound;                             // Dog's Barking Sound
-    SoundManager soundManager;                              // SoundManager Reference
+    AudioSource barkSound;                             // Dog's Barking Sound
+    // SoundManager soundManager;                              // SoundManager Reference
     #endregion
 
     #region MAIN
@@ -25,7 +25,8 @@ public class Dog : MonoBehaviour
 
     void Start(){
         clickPos = transform.position;                      // Initial click position to be dog's spawn position
-        soundManager = Singleton.instance.sound;            // Get Reference for SoundManager
+        barkSound=GetComponent<AudioSource>();
+        // soundManager = Singleton.instance.sound;            // Get Reference for SoundManager
     }
 
     // Update is called once per frame
@@ -53,7 +54,8 @@ public class Dog : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, Mathf.Rad2Deg * angle + 270);
 
             // Bark Sound
-            soundManager.PlayAudioClip(barkSound);
+            // soundManager.PlayAudioClip(barkSound);
+            barkSound.Play();
         }
 
     }
