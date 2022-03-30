@@ -12,6 +12,8 @@ public class Dog : MonoBehaviour
     Vector3 clickPos;                                       // Position of click
 
     public float speed;                                     // Dog's speed
+
+    public AudioSource Bark;
     #endregion
 
     #region MAIN
@@ -22,6 +24,7 @@ public class Dog : MonoBehaviour
 
     void Start(){
         clickPos = transform.position;                      // Initial click position to be dog's spawn position
+        Bark = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -32,6 +35,7 @@ public class Dog : MonoBehaviour
             // Get click position on world. Make sure z-axis isn't changed
             clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             clickPos.z = transform.position.z;
+            
         }
 
         // Move towards point if not there
@@ -43,7 +47,7 @@ public class Dog : MonoBehaviour
             transform.position = new Vector3(   transform.position.x + (speed * Mathf.Cos(angle) * Time.deltaTime),
                                             transform.position.y + (speed * Mathf.Sin(angle) * Time.deltaTime),
                                             transform.position.z);
-
+            Bark.Play();
             //Angle towards there
             transform.rotation = Quaternion.Euler(0, 0, Mathf.Rad2Deg * angle + 270);
         }

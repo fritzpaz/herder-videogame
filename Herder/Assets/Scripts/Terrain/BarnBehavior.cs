@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class BarnBehavior : MonoBehaviour
 {
+    public AudioSource Break;
     public GameObject sheepSpawn;
    SpriteRenderer fade;                    // Used for Fading Sheep
     void Start()
     {
         // Used for Fading
         fade= GetComponent<SpriteRenderer>();
+        Break = GetComponent<AudioSource>();
     }
 
     IEnumerator Fade(){
@@ -25,6 +27,7 @@ public class BarnBehavior : MonoBehaviour
         //If Sheep Collides with Lake, Make the Sheep Fade then Destroy itself
         if (collision.gameObject.tag == "Dog"){
             StartCoroutine("Fade");  // Call IEnumerator
+            Break.Play();
         for (int i = 0; i < Random.Range(1,6); i++){
         Instantiate(sheepSpawn, transform.position, Quaternion.identity);
         }
