@@ -9,6 +9,9 @@ public class Sheep : MonoBehaviour
     Dog dog;                                // Dog instance
     DataManager data;                       // DataManager instance
     SpriteRenderer fade;                    // SpriteManager Reference rUsed for Fading Sheep
+    SoundManager soundManager;              // SoundManager Reference
+    public AudioClip sheepSpawnSound;       // Sheep Spawn Sound
+    public AudioClip sheepDrownSound;       // Sheep Drown Sound
 
     public Vector2 sheepRepulsion;          // Sheep Repulsion Speed
     float sheepSpeed;                        // Minimum Vertical Sheep Speed
@@ -35,8 +38,14 @@ public class Sheep : MonoBehaviour
         // Update Count
         sm.sheepCount += 1;
 
+        // SoundManager Reference
+        soundManager = Singleton.instance.sound;
+
         // Used for Fading
         fade= GetComponent<SpriteRenderer>();
+
+        // Play Sheep Spawn Sound
+        soundManager.PlayAudioClip(sheepSpawnSound);
     }
 
     // Update is called once per frame
@@ -81,8 +90,9 @@ public class Sheep : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision){
         //If Sheep Collides with Lake, Make the Sheep Fade then Destroy itself
         if (collision.gameObject.tag == "Lake"){
-            StartCoroutine("FadeSheepSpriteInLake");  // Call IEnumerator
-            sheepSpeed = 0;
+            sheepSpeed = 0;                                     // Reduce sheep speed
+            soundManager.PlayAudioClip(sheepDrownSound);        // Play Drowning Sound
+            StartCoroutine("FadeSheepSpriteInLake");            // Call IEnumerator
         }
     }
        
