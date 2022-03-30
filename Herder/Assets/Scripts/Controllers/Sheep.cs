@@ -8,7 +8,8 @@ public class Sheep : MonoBehaviour
     SheepManager sm;                        // SheepManager instance
     Dog dog;                                // Dog instance
     DataManager data;                       // DataManager instance
-    SpriteRenderer fade;                    // Used for Fading Sheep
+    SpriteRenderer fade;                    // SpriteManager Reference rUsed for Fading Sheep
+
     public Vector2 sheepRepulsion;          // Sheep Repulsion Speed
     float sheepSpeed;                        // Minimum Vertical Sheep Speed
     float distance;                         // Distance from Dog
