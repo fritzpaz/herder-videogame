@@ -12,7 +12,8 @@ public class Sheep : MonoBehaviour
     public Vector2 sheepRepulsion;          // Sheep Repulsion Speed
     float sheepSpeed;                        // Minimum Vertical Sheep Speed
     float distance;                         // Distance from Dog
-    float angle;                            // Angle from Dog
+    float angle;                            // Angle from Dog 
+    float sheepRadius = 5.0f;               // Radius of Effect                  
     #endregion
 
     #region MAIN
@@ -37,7 +38,6 @@ public class Sheep : MonoBehaviour
         fade= GetComponent<SpriteRenderer>();
     }
 
-
     // Update is called once per frame
     void Update()
     {
@@ -46,11 +46,19 @@ public class Sheep : MonoBehaviour
         angle = Mathf.Atan2(dog.transform.position.y - transform.position.y, 
                             dog.transform.position.x - transform.position.x);
 
-        // Move sheep up slightly
-        transform.position = new Vector3(   transform.position.x - (sheepRepulsion.x * (1/distance) * Mathf.Cos(angle) * Time.deltaTime),
+
+        //Move sheep up slightly
+        // transform.position = new Vector3(   transform.position.x - (sheepRepulsion.x * (1/distance) * Mathf.Cos(angle) * Time.deltaTime),
+        //                                     transform.position.y + (sheepSpeed * Time.deltaTime)
+        //                                                         - (sheepRepulsion.y * (1 / distance) * Mathf.Sin(angle) * Time.deltaTime),
+        //                                     transform.position.z);
+
+        if (Vector2.Distance ( dog.transform.position, transform.position) < sheepRadius){
+            transform.position = new Vector3(   transform.position.x - (sheepRepulsion.x * (1/distance) * Mathf.Cos(angle) * Time.deltaTime),
                                             transform.position.y + (sheepSpeed * Time.deltaTime)
                                                                 - (sheepRepulsion.y * (1 / distance) * Mathf.Sin(angle) * Time.deltaTime),
                                             transform.position.z);
+        } 
 
         // Rotate Sheep towards where it moves
         transform.rotation = Quaternion.Euler(0, 0, Mathf.Rad2Deg * angle + 90);
