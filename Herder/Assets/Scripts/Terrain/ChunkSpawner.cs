@@ -17,6 +17,15 @@ public class ChunkSpawner : MonoBehaviour
         SpawnChunk();   // Spawn First Chunk on Start
     }
 
+    // Update
+    private void Update()
+    {
+        if(Singleton.instance.data.levelSpeed < Singleton.instance.data.startLevelSpeed)
+        {
+            Singleton.instance.data.levelSpeed += 0.5f * Time.deltaTime;
+        }
+    }
+
     // Spawns the Chunk and Gives it necessary information/organization to keep project neat
     public void SpawnChunk(){
         // Spawning of next chunk is handled within the chunk

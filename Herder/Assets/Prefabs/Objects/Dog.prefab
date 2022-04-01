@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  dogBarkSound: {fileID: 8300000, guid: 7d307ea92fdf3cc45b12b4d5657b236f, type: 3}
+  dogBarkSoundInterval: {x: 0.5, y: 2}
 --- !u!50 &2547307487083395444
 Rigidbody2D:
   serializedVersion: 4
@@ -146,9 +148,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7d307ea92fdf3cc45b12b4d5657b236f, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.62
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0

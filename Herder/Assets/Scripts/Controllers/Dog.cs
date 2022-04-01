@@ -13,8 +13,9 @@ public class Dog : MonoBehaviour
 
     public float speed;                                     // Dog's speed
 
-    AudioSource barkSound;                             // Dog's Barking Sound
-    // SoundManager soundManager;                              // SoundManager Reference
+    public AudioClip dogBarkSound;                          // Dog's Barking Sound 
+    public Vector2 dogBarkSoundInterval;                    // Interval between barks (random in range)
+    AudioSource audioSource;                                // AudioSource Component
     #endregion
 
     #region MAIN
@@ -25,8 +26,9 @@ public class Dog : MonoBehaviour
 
     void Start(){
         clickPos = transform.position;                      // Initial click position to be dog's spawn position
-        barkSound=GetComponent<AudioSource>();
-        // soundManager = Singleton.instance.sound;            // Get Reference for SoundManager
+        audioSource = GetComponent<AudioSource>();            // Get AudioSource Reference
+
+        StartCoroutine("PlayBarkSound");                    // Start coroutine to bark every 1 to 3 seconds.
     }
 
     // Update is called once per frame
@@ -49,15 +51,22 @@ public class Dog : MonoBehaviour
             transform.position = new Vector3(   transform.position.x + (speed * Mathf.Cos(angle) * Time.deltaTime),
                                             transform.position.y + (speed * Mathf.Sin(angle) * Time.deltaTime),
                                             transform.position.z);
+
             
             //Angle towards there
             transform.rotation = Quaternion.Euler(0, 0, Mathf.Rad2Deg * angle + 270);
 
-            // Bark Sound
-            // soundManager.PlayAudioClip(barkSound);
-            barkSound.Play();
         }
 
+    }
+
+    // Bark Every Few Seconds
+    IEnumerator PlayBarkSound()
+    {
+        audioSource.PlayOneShot(dogBarkSound);
+        yield return new WaitForSeconds(Random.Range(dogBarkSoundInterval.x, dogBarkSoundInterval.y));
+
+        StartCoroutine("PlayBarkSound");
     }
     #endregion
 }

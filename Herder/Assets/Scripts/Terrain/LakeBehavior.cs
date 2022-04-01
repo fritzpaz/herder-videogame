@@ -12,7 +12,7 @@ public class LakeBehavior : MonoBehaviour
     }
    private void OnTriggerEnter2D(Collider2D collison){
         if (collison.gameObject.tag == "Sheep"){
-            soundManager.PlayAudioClip(breakSound);         // Play audio clip when sheep dies   
+            //soundManager.PlayAudioClip(breakSound);         // Play audio clip when sheep dies   
             Destroy(collison.gameObject,1);
         }
     }

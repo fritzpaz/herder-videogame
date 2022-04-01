@@ -104,7 +104,7 @@ public class DataManager : MonoBehaviour
     public void PrepDataForGame()
     {
         score = 0;
-        levelSpeed = startLevelSpeed;
+        levelSpeed = 0;
     }
 #endregion
 }

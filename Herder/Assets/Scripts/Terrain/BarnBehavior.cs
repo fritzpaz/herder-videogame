@@ -6,7 +6,7 @@ public class BarnBehavior : MonoBehaviour
 {
     public GameObject sheepPrefab;              // Prefab for Spawning Sheep
     SpriteRenderer fade;                        // Used for Fading Sheep
-    SoundManager soundManager;                  // SoundManager Reference
+    AudioSource audioSource;                    // AudioSource Reference
     public AudioClip breakSound;                // Breaking Barn Sound
 
     void Start()
@@ -14,14 +14,14 @@ public class BarnBehavior : MonoBehaviour
         // Used for Fading
         fade= GetComponent<SpriteRenderer>();
 
-        soundManager = Singleton.instance.sound;        // SoundManager Reference
+        audioSource = GetComponent<AudioSource>();        // AudioSource Reference
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
         //If Sheep Collides with Lake, Make the Sheep Fade then Destroy itself
         if (collision.gameObject.tag == "Dog"){
             StartCoroutine("Fade");  // Call IEnumerator
-            soundManager.PlayAudioClip(breakSound);
+            audioSource.PlayOneShot(breakSound);
 
             // Spawn a Random Number of Sheep
             for (int i = 0; i < Random.Range(1,6); i++){
