@@ -130,7 +130,7 @@ public class Sheep : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision){
         //If Sheep Collides with Lake, Make the Sheep Fade then Destroy itself
         if (collision.gameObject.tag == "Lake"){
-            sheepSpeed = 0;                                     // Reduce sheep speed
+            sheepSpeed = 2;                                     // Reduce sheep speed
             audioSource.volume = sheepDrownSoundVolume;         // Set Volume
             audioSource.PlayOneShot(sheepDrownSound);           // Play Drowning Sound
             StartCoroutine("FadeSheepSpriteInLake");            // Call IEnumerator
