@@ -2,7 +2,7 @@
 
 ## Team
 
-Ben Mann, Noah Harvey, Fritz Stapfer Paz
+Ben Mann, Noah Harvey, Fritz Stapfer Paz, Alex Hernandez
 
 ## Overview (Elevator Pitch)
 
