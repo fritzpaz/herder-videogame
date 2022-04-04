@@ -15,9 +15,9 @@ public class CoinBehavior : MonoBehaviour
     {
         
     }
-    public void OntriggerEnter(Collider2D collision){
+    public void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag == "Sheep"){
-            Destroy(this.gameObject);
+            Destroy(gameObject);
             //Add Coins to Score - Fritz
         }
     }

@@ -8,6 +8,7 @@ TagManager:
   - Lake
   - Barn
   - Dog
+  - Coin
   layers:
   - Default
   - TransparentFX

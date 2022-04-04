@@ -820,6 +820,8 @@ MonoBehaviour:
   - {fileID: -4149922931301184327, guid: a3754ca2bd394bc498ea18fbc53d0748, type: 3}
   - {fileID: 4005279705704719996, guid: 5e755f3b4ec82214c8e1efc3ed53c1b4, type: 3}
   - {fileID: -7344059034362766780, guid: 9fe26bacef4d36b47b10c7fa698e2572, type: 3}
+  - {fileID: -7344059034362766780, guid: 9fe26bacef4d36b47b10c7fa698e2572, type: 3}
+  - {fileID: -7344059034362766780, guid: 9fe26bacef4d36b47b10c7fa698e2572, type: 3}
   chunkSpawnPos: 15
   chunkDeathPos: -15
   activeChunks: []
