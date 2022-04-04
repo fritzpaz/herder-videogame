@@ -29,7 +29,7 @@ public class BarnBehavior : MonoBehaviour
             }
 
             // Destroy Barn
-            Destroy(gameObject);
+            Destroy(gameObject,.37f);
         }
     }
 

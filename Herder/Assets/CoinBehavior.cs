@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class CoinBehavior : MonoBehaviour
 {
+    public AudioSource coinChing;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        coinChing = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
     public void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag == "Sheep"){
-            Destroy(gameObject);
+
+            coinChing.Play();        
+            Destroy(gameObject,.1f);   
+            
             //Add Coins to Score - Fritz
         }
     }
