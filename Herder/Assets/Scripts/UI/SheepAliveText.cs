@@ -23,7 +23,7 @@ public class SheepAliveText : MonoBehaviour
     void Update()
     {
         // Update Score Text
-        text.text = "SHEEP ALIVE: " + sheepManager.sheepCount.ToString();
+        text.text = "x" + sheepManager.sheepCount.ToString();
     }
     #endregion
 }
