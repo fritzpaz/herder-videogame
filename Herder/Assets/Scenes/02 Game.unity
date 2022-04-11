@@ -988,6 +988,13 @@ MonoBehaviour:
   - {fileID: -7344059034362766780, guid: 9fe26bacef4d36b47b10c7fa698e2572, type: 3}
   - {fileID: -6534884843875654955, guid: 5b4b79ac823d84181b56c7ddf206d5e8, type: 3}
   - {fileID: 788227173093450681, guid: c078265c430194a9e8fc1431a4f71795, type: 3}
+  - {fileID: 5175644176487784781, guid: a538a12b66b684e85a3095e8f1f18dfa, type: 3}
+  - {fileID: 2642607897333641499, guid: 585237f28afdb4b08a4b6d65fb9b804d, type: 3}
+  - {fileID: 5737975480620509943, guid: 2c541fed4818245d08dcdfcbf0ea165f, type: 3}
+  - {fileID: 851081343885262866, guid: 75232ace60ed54636924902c2f3530b5, type: 3}
+  - {fileID: -9014553683746739091, guid: 5cf02a80cb64a49ffbc73918e8661a69, type: 3}
+  - {fileID: 2163443772600930330, guid: 53aac1888435e4071bfb61e42ddd68f3, type: 3}
+  - {fileID: 3179174561034642300, guid: 3dd84a97ed88b44129d21154f4591e99, type: 3}
   chunkSpawnPos: 15
   chunkDeathPos: -15
   activeChunks: []
