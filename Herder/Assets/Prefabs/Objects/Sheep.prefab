@@ -132,7 +132,7 @@ MonoBehaviour:
   sheepDrownSoundVolume: 1
   sheepRepulsion: {x: 10, y: 10}
   sheepMvmtX: {x: -2, y: 2}
-  sheepMvmtY: {x: -0.5, y: 0.5}
+  sheepMvmtY: {x: 0, y: 2}
   sheepSpeed: 1
   sheepRadius: 5
 --- !u!50 &1082634524

@@ -35,6 +35,7 @@ public class DataManager : MonoBehaviour
     void OnEnable(){
         // Scene Loading Listener
         SceneManager.sceneLoaded += OnSceneLoaded;
+        Load();
     }
     // Runs when a different scene is loaded
     void OnSceneLoaded(Scene scene, LoadSceneMode mode){
@@ -43,6 +44,7 @@ public class DataManager : MonoBehaviour
     // Runs when DataManager is disabled
     void OnDisable(){
         SceneManager.sceneLoaded -= OnSceneLoaded;
+        Save();
     }
     #endregion
 
@@ -106,26 +108,24 @@ public class DataManager : MonoBehaviour
         score = 0;
         levelSpeed = 0;
     }
-#endregion
-}
 
-[SerializeField]
-public class GameData{
-    #region DATA
-    // GAME
-    public int score;
-    public int money;
-    public int highscore;
-    public float levelSpeed;
-    public readonly float maxLevelSpeed;
-    List<GameObject> chunkHistory;
+    // Save and Load
+    public void Load()
+    {
+        money = PlayerPrefs.GetInt("money", 0);
+        highscore = PlayerPrefs.GetInt("highscore", 0);
+        musicVolume = PlayerPrefs.GetFloat("music", 1);
+        audioVolume = PlayerPrefs.GetFloat("audio", 1);
+        if (PlayerPrefs.GetString("ads", "true").Equals("false")) { ads = false; } else { ads = true; }
+    }
+    public void Save()
+    {
+        PlayerPrefs.SetInt("money", money);
+        PlayerPrefs.SetInt("highscore", highscore);
+        PlayerPrefs.SetFloat("music", musicVolume);
+        PlayerPrefs.SetFloat("audio", audioVolume);
+        if (ads.Equals("false")) { PlayerPrefs.SetString("ads", "false"); }
 
-    // STORE
-    // define how to setup available players, selected players, etc.
-
-    // ORGANIZATION
-    public int sceneNumber;
-    public bool ads;
-
+    }
 #endregion
 }

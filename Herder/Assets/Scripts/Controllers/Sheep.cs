@@ -72,7 +72,8 @@ public class Sheep : MonoBehaviour
 
             // React to dog if close
             transform.position = new Vector3(   transform.position.x - (sheepSpeed * (sheepRepulsion.x * (1 / Mathf.Pow(distance, 1.2f) * Mathf.Cos(angle) * Time.deltaTime))),
-                                                transform.position.y - (sheepSpeed * (sheepRepulsion.y * (1 / Mathf.Pow(distance, 1.2f) * Mathf.Sin(angle) * Time.deltaTime))),
+                                                transform.position.y - (sheepSpeed * (sheepRepulsion.y * (1 / Mathf.Pow(distance, 1.2f) * Mathf.Sin(angle) * Time.deltaTime)))
+                                                                     - (Singleton.instance.data.levelSpeed * Time.deltaTime),
                                                 transform.position.z);
 
             // Rotate Sheep towards where it moves
@@ -100,7 +101,8 @@ public class Sheep : MonoBehaviour
 
             // Move randomly when far from dog
             transform.position = new Vector3(   transform.position.x + (randomMvmtX * sheepSpeed * Time.deltaTime),
-                                                transform.position.y + (randomMvmtY * sheepSpeed * Time.deltaTime),
+                                                transform.position.y + (randomMvmtY * sheepSpeed * Time.deltaTime)
+                                                                     - (Singleton.instance.data.levelSpeed * Time.deltaTime),
                                                 transform.position.z);
 
         }
