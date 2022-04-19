@@ -5,6 +5,8 @@ using UnityEngine;
 public class ChunkSpawner : MonoBehaviour
 {
     #region DATA
+    public DataManager data;                    // Data Manager reference
+
     public Chunk[] chunks;                      // Array of possible spawnable prefab chunks
     public float chunkSpawnPos;                 // Chunk Spawning Position
     public float chunkDeathPos;                 // Chunk Destroy Position
@@ -15,15 +17,28 @@ public class ChunkSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start(){
         SpawnChunk();   // Spawn First Chunk on Start
+
+        data = Singleton.instance.data;                 // Set Reference
+        data.targetLevelSpeed = data.startLevelSpeed;   // Set target Level Speed
     }
 
     // Update
     private void Update()
     {
-        if(Singleton.instance.data.levelSpeed < Singleton.instance.data.startLevelSpeed)
+        // Adjust target speed based on score
+        if(data.targetLevelSpeed < data.maxLevelSpeed)
         {
-            Singleton.instance.data.levelSpeed += 0.5f * Time.deltaTime;
+            if(((data.maxLevelSpeed) * (data.score / 99999f)) > data.startLevelSpeed){
+                data.targetLevelSpeed = (data.maxLevelSpeed) * (data.score / 99999f);
+            }
         }
+
+        // Change Actual level scrolling speed
+        if(data.levelSpeed < data.targetLevelSpeed)
+        {
+            data.levelSpeed += 0.5f * Time.deltaTime;
+        }
+
     }
 
     // Spawns the Chunk and Gives it necessary information/organization to keep project neat

@@ -17,8 +17,9 @@ public class DataManager : MonoBehaviour
 
     // TERRAIN
     public float startLevelSpeed;
+    public float targetLevelSpeed;
     public float levelSpeed;
-    public readonly float maxLevelSpeed;
+    public float maxLevelSpeed;
     List<GameObject> chunkHistory;
 
     // STORE
@@ -107,6 +108,7 @@ public class DataManager : MonoBehaviour
     {
         score = 0;
         levelSpeed = 0;
+
     }
 
     // Save and Load

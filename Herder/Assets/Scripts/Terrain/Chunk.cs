@@ -20,6 +20,7 @@ public class Chunk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         // Make chunk scroll down
         transform.position = new Vector3(   transform.position.x,
                                             transform.position.y - (Singleton.instance.data.levelSpeed * Time.deltaTime),
