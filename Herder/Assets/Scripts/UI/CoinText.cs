@@ -25,7 +25,7 @@ public class CoinText : MonoBehaviour
     void Update()
     {
         // Update Score Text
-        text.text = data.money.ToString();
+        text.text = "x" + data.money.ToString();
     }
     #endregion
 }
